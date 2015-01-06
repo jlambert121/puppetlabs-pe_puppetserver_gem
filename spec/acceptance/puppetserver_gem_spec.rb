@@ -1,11 +1,11 @@
 require 'spec_helper_acceptance'
 
-describe 'installing a gem with the pe_puppetserver_gem provider' do
+describe 'installing a gem with the puppetserver_gem provider' do
   it 'should work with no errors' do
     pp = <<-EOS
       package { 'hocon':
         ensure => present,
-        provider => pe_puppetserver_gem,
+        provider => puppetserver_gem,
       }
     EOS
 
@@ -19,12 +19,12 @@ describe 'installing a gem with the pe_puppetserver_gem provider' do
   end
 end
 
-describe 'removing a gem with the pe_puppetserver_gem provider' do
+describe 'removing a gem with the puppetserver_gem provider' do
   it 'should work with no errors' do
     pp = <<-EOS
       package { 'hocon':
         ensure => absent,
-        provider => pe_puppetserver_gem,
+        provider => puppetserver_gem,
       }
     EOS
 
